@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sampleRoute = void 0;
+const express_1 = require("express");
+const sample_controller_1 = require("./sample.controller");
+const router = (0, express_1.Router)();
+router.get("/createSample", sample_controller_1.sampleController.allSample);
+router.get("/createSample/onProcess", sample_controller_1.sampleController.onProcessItems);
+router.post("/createSample", sample_controller_1.sampleController.createaSample);
+router.put('/updateSample/:id', sample_controller_1.sampleController.updateSample);
+exports.sampleRoute = router;
